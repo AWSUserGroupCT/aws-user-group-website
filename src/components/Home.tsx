@@ -1,4 +1,3 @@
-import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Home = () => {
@@ -13,6 +12,7 @@ const Profile = () => {
       <h2>Profile</h2>
       <p>Name: {user?.name ?? "Unknown"}</p>
       <p>Email: {user?.email}</p>
+      <img src={user?.picture} alt={user?.name} />
     </div>
   );
 };

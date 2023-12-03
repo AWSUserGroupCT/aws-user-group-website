@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import ListGroup from "./components/WelcomeUsers";
 import ProtectedRoute from "./components/authentication/ProtectedRoute";
 import About from "./components/About";
-import Home from "./components/Home";
 import LoginButton from "./components/authentication/Login";
 import Logout from "./components/authentication/Logout";
 function App() {

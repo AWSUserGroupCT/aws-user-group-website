@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "../../assets/meetup_logo.png"; // Adjust the path to where your actual meetup logo is
 import meetupLogo from "../../assets/meetup-icon.svg"; // Adjust the path to where your actual meetup logo is
 import discordLogo from "../../assets/discord-icon.svg"; // Adjust the path to where your actual discord logo is

@@ -1,12 +1,7 @@
 // PascalCasing
 
 // Make an api call to Meetup to get events 
-function getEventsMeetup() {
-    // Make an api call to Meetup to get events
-    // Return a list of events
-    
-    return [];
-}
+
 
 function Message() {
     const name = "Evan"

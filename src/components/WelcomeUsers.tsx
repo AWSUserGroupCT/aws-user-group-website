@@ -5,7 +5,6 @@ import { useAuth0 } from "@auth0/auth0-react";
 import "./css/TypingEffect.css";
 import "./css/Snowfall.css";
 import "./css/Buttons.css";
-
 import hartfordImage from "../assets/City_in_White.png"; // Import the hartford.webp image
 
 interface ListGroupProps {
@@ -14,24 +13,7 @@ interface ListGroupProps {
 }
 
 function ListGroup({ items }: ListGroupProps) {
-  const { user } = useAuth0();
-  const TypingEffect = () => {
-    const phrases = ["Builders", "Architects", "Developers", "Passionate"];
-
-    const [index, setIndex] = useState(0);
-    const [text, setText] = useState("");
-
-    useEffect(() => {
-      const timeoutId = setTimeout(() => {
-        setText(phrases[index]);
-        setIndex((index + 1) % phrases.length);
-      }, 3000); // Change text every 3 seconds
-
-      return () => clearTimeout(timeoutId);
-    }, [index, phrases]);
-
-    return <Fragment></Fragment>;
-  };
+  const { user, isAuthenticated } = useAuth0();
 
   return (
     <div>
@@ -48,23 +30,32 @@ function ListGroup({ items }: ListGroupProps) {
             display: "flex",
             justifyContent: "center",
           }}
-        >
-          <a
-            href="https://discord.gg/47Gh8FaKt6"
-            className="button discord-button"
-          >
-            <i className="fab fa-discord"></i> Join the Discord
-          </a>
-          <a
-            href="https://www.meetup.com/aws-community-meetup-connecticut/"
-            className="button meetup-button"
-          >
-            <i className="fab fa-meetup"></i> Join the Meetup
-          </a>
-        </div>
-      </div>
+              >
+                <a
+                  href="https://discord.gg/47Gh8FaKt6"
+                  className="button discord-button large-button" // Add the "large-button" class
+                  style={{ 
+                    fontSize: "2rem", // Increase the font size
+                    boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.4)" // Increase the strength of the drop shadow
+                  }}
+                >
+                  <i className="fab fa-discord"></i> Join the Discord
+                </a>
+                <a
+                  href="https://www.meetup.com/aws-community-meetup-connecticut/"
+                  className="button meetup-button large-button" // Add the "large-button" class
+                  style={{ 
+                    fontSize: "2rem", // Increase the font size
+                    boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.4)" // Increase the strength of the drop shadow
+                  }}
+                >
+                  <i className="fab fa-meetup"></i> Join the Meetup
+                </a>
+              </div>
+            </div>
+      <h1 style={{ color: "#9B6AF7", marginTop: "10px", marginBottom: "10px", marginLeft: "10px", textAlign: "center", fontSize: "5rem" }}>{isAuthenticated ? `Welcome ${user?.name}` : "Welcome"}</h1>
+      <p style={{ color: "#9B6AF7", marginTop: "5px", marginBottom: "5px", marginLeft: "10px", textAlign: "center", fontSize: "2rem" }}>Please see the upcoming events below.</p>
       {items.length === 0 && <p>no items to show</p>}
-      <TypingEffect />
       <div className="snowflakes">
         {Array.from({ length: 100 }).map((_, index) => (
           <div key={index} className="snowflake" />
