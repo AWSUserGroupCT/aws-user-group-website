@@ -1,0 +1,42 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adjust the space between buttons */
+    padding: 20px;
+    background-color: #ff7f50; /* This is the orange background */
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    font-size: 16px; /* Adjust the font size as needed */
+    text-align: center;
+  }
+  
+  .discord-button {
+    background-color: #7289da; /* Discord brand color */
+  }
+  
+  .discord-button:hover {
+    background-color: #5b6eae; /* Darker shade for hover effect */
+  }
+  
+  .meetup-button {
+    background-color: #f64060; /* Meetup brand color */
+  }
+  
+  .meetup-button:hover {
+    background-color: #d53757; /* Darker shade for hover effect */
+  }
+  
+  /* Icons from Font Awesome */
+  .fab {
+    margin-right: 8px;
+  }
+  
