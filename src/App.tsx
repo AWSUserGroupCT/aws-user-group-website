@@ -1,11 +1,13 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React, { useState } from "react";
-
 import ListGroup from "./components/WelcomeUsers";
 import ProtectedRoute from "./components/authentication/ProtectedRoute";
 import About from "./components/About";
 import LoginButton from "./components/authentication/Login";
 import Logout from "./components/authentication/Logout";
+// Import the menu
+import Menu from "./components/core/Menu";
+
 function App() {
   let items = ["New York", "San Francisco", "Paris", "Berlin", "London"];
   const [selectedItem, setSelectedItem] = useState("");
@@ -16,6 +18,7 @@ function App() {
   return (
     <div>
       <Router>
+      <Menu />
         <Routes>
           <Route path="/button" element={<div />} />
           <Route path="/alert" element={<div />} />

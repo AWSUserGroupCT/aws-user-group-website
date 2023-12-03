@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
+import Menu from "./components/core/Menu.tsx";
 import { Auth0Provider } from "@auth0/auth0-react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -12,6 +13,7 @@ if (!domain || !clientId) {
 }
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
+
   <Auth0Provider
     domain={domain}
     clientId={clientId}

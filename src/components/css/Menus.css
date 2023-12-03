@@ -1,0 +1,15 @@
+.app-bar {
+    background: linear-gradient(45deg, #4A2574, #8C3B9B);
+  }
+  
+  .icon-button-start {
+    margin-right: 2px;
+  }
+  
+  .typography-div {
+    flex-grow: 1;
+  }
+  
+  .icon-button-end {
+    margin-left: 2px;
+  }

@@ -1,5 +1,5 @@
 import { Fragment, useState, useEffect } from "react";
-import AccountMenu from "./core/AccountMenu";
+import AccountMenu from "./core/Menu";
 import Footer from "./core/Footer";
 import { useAuth0 } from "@auth0/auth0-react";
 import "./css/TypingEffect.css";
@@ -17,7 +17,6 @@ function ListGroup({ items }: ListGroupProps) {
 
   return (
     <div>
-      <AccountMenu />
       <div style={{ position: "relative" }}>
         <img src={hartfordImage} alt="Hartford" style={{ width: "100%" }} />{" "}
         {/* Display the hartford.webp image full width */}

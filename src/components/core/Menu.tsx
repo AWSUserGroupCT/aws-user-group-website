@@ -7,6 +7,7 @@ import IconButton from "@mui/material/IconButton";
 import logo from "../../assets/meetup_logo.png";
 import youtubeLogo from "../../assets/icons8-youtube-48.png";
 import meetupLogo from "../../assets/icons8-meetup-50.png";
+import "../css/Menus.css";
 import Avatar from "@mui/material/Avatar";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
@@ -47,8 +48,8 @@ export default function ButtonAppBar() {
           aria-label="menu"
           sx={{ mr: 2 }}
         >
-          <img src={logo} alt="Logo" height="50" />
-        </IconButton>
+            <img src={logo} alt="Logo" height="50" className="logo" />
+          </IconButton>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           AWS User Group - Connecticut
         </Typography>
