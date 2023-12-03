@@ -30,6 +30,7 @@ function App() {
               <ListGroup items={items} onSelectItem={handleSelectItem} />
             }
           />
+          <ProtectedRoute path="/profile" element={<Profile />} />
         </Routes>
       </Router>
     </div>
