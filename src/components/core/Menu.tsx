@@ -31,6 +31,11 @@ export default function ButtonAppBar() {
     handleClose(); // This will close the menu
     navigate("/logout"); // This will navigate to the /logout route
   };
+
+  const handleProfileClick = () => {
+    handleClose(); // This will close the menu
+    navigate("/profile"); // This will navigate to the /profile route
+  };
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -48,8 +53,8 @@ export default function ButtonAppBar() {
           aria-label="menu"
           sx={{ mr: 2 }}
         >
-            <img src={logo} alt="Logo" height="50" className="logo" />
-          </IconButton>
+          <img src={logo} alt="Logo" height="50" className="logo" />
+        </IconButton>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           AWS User Group - Connecticut
         </Typography>
@@ -98,7 +103,7 @@ export default function ButtonAppBar() {
           open={open}
           onClose={handleClose}
         >
-          <MenuItem onClick={handleClose}>Profile</MenuItem>
+          <MenuItem onClick={handleProfileClick}>Profile</MenuItem>
           {!isAuthenticated && (
             <MenuItem onClick={handleLoginClick}>Login</MenuItem>
           )}
