@@ -47,6 +47,7 @@ export default function ButtonAppBar() {
     >
       <Toolbar>
         <IconButton
+          href="/"
           size="large"
           edge="start"
           color="inherit"
@@ -69,7 +70,7 @@ export default function ButtonAppBar() {
         </Button>
         <Button
           color="inherit"
-          href="https://discord.gg/EXP4qWkJF4"
+          href="https://www.youtube.com/channel/UC1aGcIaXJPp1_iYDIFoZtQQ"
           startIcon={<img src={youtubeLogo} alt="YouTube Logo" height="20" />}
         >
           YouTube

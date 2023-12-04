@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React, { useState } from "react";
 import ListGroup from "./components/WelcomeUsers";
-import ProtectedRoute from "./components/authentication/ProtectedRoute";
 import About from "./components/About";
 import Profile from "./components/Profile";
+import MeetupGetEvents from "./components/meetup/MeetupGetEvents";
 import LoginButton from "./components/authentication/Login";
 import Logout from "./components/authentication/Logout";
 import Menu from "./components/core/Menu";
@@ -24,13 +24,14 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<LoginButton />} />
           <Route path="/logout" element={<Logout />} />
+          <Route path="/meetup" element={<MeetupGetEvents />} />
           <Route
             path="/"
             element={
               <ListGroup items={items} onSelectItem={handleSelectItem} />
             }
           />
-          <ProtectedRoute path="/profile" element={<Profile />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </Router>
     </div>

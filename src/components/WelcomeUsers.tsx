@@ -29,31 +29,53 @@ function ListGroup({ items }: ListGroupProps) {
             display: "flex",
             justifyContent: "center",
           }}
-              >
-                <a
-                  href="https://discord.gg/47Gh8FaKt6"
-                  className="button discord-button large-button" // Add the "large-button" class
-                  style={{ 
-                    fontSize: "2rem", // Increase the font size
-                    boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.4)" // Increase the strength of the drop shadow
-                  }}
-                >
-                  <i className="fab fa-discord"></i> Join the Discord
-                </a>
-                <a
-                  href="https://www.meetup.com/aws-community-meetup-connecticut/"
-                  className="button meetup-button large-button" // Add the "large-button" class
-                  style={{ 
-                    fontSize: "2rem", // Increase the font size
-                    boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.4)" // Increase the strength of the drop shadow
-                  }}
-                >
-                  <i className="fab fa-meetup"></i> Join the Meetup
-                </a>
-              </div>
-            </div>
-      <h1 style={{ color: "#9B6AF7", marginTop: "10px", marginBottom: "10px", marginLeft: "10px", textAlign: "center", fontSize: "5rem" }}>{isAuthenticated ? `Welcome ${user?.name}` : "Welcome"}</h1>
-      <p style={{ color: "#9B6AF7", marginTop: "5px", marginBottom: "5px", marginLeft: "10px", textAlign: "center", fontSize: "2rem" }}>Please see the upcoming events below.</p>
+        >
+          <a
+            href="https://discord.gg/47Gh8FaKt6"
+            className="button discord-button large-button" // Add the "large-button" class
+            style={{
+              fontSize: "2rem", // Increase the font size
+              boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.4)", // Increase the strength of the drop shadow
+            }}
+          >
+            <i className="fab fa-discord"></i> Join the Discord
+          </a>
+          <a
+            href="https://www.meetup.com/aws-community-meetup-connecticut/"
+            className="button meetup-button large-button" // Add the "large-button" class
+            style={{
+              fontSize: "2rem", // Increase the font size
+              boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.4)", // Increase the strength of the drop shadow
+            }}
+          >
+            <i className="fab fa-meetup"></i> Join the Meetup
+          </a>
+        </div>
+      </div>
+      <h1
+        style={{
+          color: "#9B6AF7",
+          marginTop: "10px",
+          marginBottom: "10px",
+          marginLeft: "10px",
+          textAlign: "center",
+          fontSize: "5rem",
+        }}
+      >
+        {isAuthenticated ? `Welcome, ${user?.name}` : "Welcome"}
+      </h1>
+      <p
+        style={{
+          color: "#9B6AF7",
+          marginTop: "5px",
+          marginBottom: "5px",
+          marginLeft: "10px",
+          textAlign: "center",
+          fontSize: "2rem",
+        }}
+      >
+        Please see the upcoming events below.
+      </p>
       {items.length === 0 && <p>no items to show</p>}
       <div className="snowflakes">
         {Array.from({ length: 100 }).map((_, index) => (
