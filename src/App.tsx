@@ -31,7 +31,14 @@ function App() {
               <ListGroup items={items} onSelectItem={handleSelectItem} />
             }
           />
-          <Route path="/profile" element={<Profile />} />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute redirectTo="/login">
+                <Profile />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </Router>
     </div>
