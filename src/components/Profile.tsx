@@ -1,6 +1,5 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import Grid from '@mui/material/Grid'; 
-import Item from '@mui/material/Grid';
 import './css/PurpleTheme.css'
 const options = [
   {

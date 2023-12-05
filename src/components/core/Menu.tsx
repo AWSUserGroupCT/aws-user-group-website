@@ -104,7 +104,9 @@ export default function ButtonAppBar() {
           open={open}
           onClose={handleClose}
         >
-          <MenuItem onClick={handleProfileClick}>Profile</MenuItem>
+          {isAuthenticated && (
+            <MenuItem onClick={handleProfileClick}>Profile</MenuItem>
+          )}
           {!isAuthenticated && (
             <MenuItem onClick={handleLoginClick}>Login</MenuItem>
           )}
